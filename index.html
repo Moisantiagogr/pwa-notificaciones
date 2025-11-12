@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <title>PWA + Firebase Push</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            margin: 2rem;
+        }
+
+        pre {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: .5rem;
+            overflow: auto;
+        }
+
+        button {
+            padding: .6rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: .5rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Notificaciones Push con Firebase (PWA)</h1>
+    <ol>
+        <li>Da clic en <strong>Habilitar notificaciones</strong>.</li>
+        <li>Copia el <strong>token</strong> para usarlo en Firebase Console.</li>
+    </ol>
+
+    <button id="btn-permission">Habilitar notificaciones</button>
+    <p><strong>Estado permiso:</strong> <span id="perm">desconocido</span></p>
+    <h3>Token (cópialo para pruebas):</h3>
+    <pre id="token">—</pre>
+
+    <h3>Mensajes en primer plano:</h3>
+    <pre id="log">—</pre>
+
+    <script type="module" src="/app.js"></script>
+</body>
+
+</html>
